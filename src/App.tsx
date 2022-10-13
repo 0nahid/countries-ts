@@ -18,7 +18,7 @@ const LoadCountries = () => {
     }, []);
     return (
         <div className="App">
-            <p>Countries {countries.length}</p>
+            <p>Loaded Countries : {countries.length}</p>
         </div>
     )
 };
