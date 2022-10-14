@@ -1,25 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
-
-export default function App() {
+import React from 'react';
+import "./App.css";
+import CountriesLoad from './components/CountriesLoad/CountriesLoad';
+const App = () => {
   return (
     <div className="App">
-        <LoadCountries></LoadCountries>
+      <CountriesLoad/>
     </div>
-  )
-}
-
-const LoadCountries = () => {
-    const [countries, setCountries] = useState([]);
-    useEffect(() => {
-      fetch("https://restcountries.com/v3.1/all")
-        .then((res) => res.json())
-        .then((data) => setCountries(data));
-    }, []);
-    return (
-        <div className="App">
-            <p>Loaded Countries : {countries.length}</p>
-        </div>
-    )
+  );
 };
 
+export default App;
