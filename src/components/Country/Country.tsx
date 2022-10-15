@@ -18,6 +18,17 @@ export default function Country(props: object, index: number) {
         }}
           src={flags.svg} alt="" />
         <h2>{name.common}</h2>
+        <button
+          style={{
+            padding: "10px", borderRadius: "10px",
+            border: "none", cursor: "pointer",
+            fontSize: "16px", fontWeight: "bold",
+            outline: "none"
+
+          }}
+        >
+          <a href={`https://en.wikipedia.org/wiki/${name.common}`} target="_blank" rel="noreferrer" >View Details</a>
+        </button>
       </div>
     </>
   );
