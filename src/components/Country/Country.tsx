@@ -1,4 +1,3 @@
-import React from "react";
 import { countryData } from "../../types";
 import "./Country.css";
 
@@ -12,9 +11,12 @@ export default function Country(props: object, index: number) {
   return (
     <>
       <div className="country">
-        <img style={{ width: "250px", 
-         backgroundPosition: 'center', backgroundSize: 'cover' }} 
-           src={flags.svg} alt="" />
+        <img style={{
+          width: "250px", height: "190px",
+          backgroundPosition: 'center', backgroundSize: 'cover',
+          padding: "10px", borderRadius: "10px"
+        }}
+          src={flags.svg} alt="" />
         <h2>{name.common}</h2>
       </div>
     </>
