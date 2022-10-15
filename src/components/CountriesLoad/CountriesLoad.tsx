@@ -21,6 +21,7 @@ export default function CountriesLoad() {
           name={country.name}
           capital={country.capital}
           region={country.region}
+          population={country.population}
         />
       ))}
     </div>

@@ -5,14 +5,15 @@ export default function Country(props: iCountry) {
   const {
     name: { common },
     capital,
+    population,
   } = props;
-  console.log(props);
 
   return (
     <>
       <div>
-        <h1> {capital} </h1>
-        <h2> {common} </h2>
+        <h2>Name : {common}</h2>
+        <p>Capital : {capital}</p>
+        <p>Population : {population}</p>
       </div>
     </>
   );

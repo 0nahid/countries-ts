@@ -4,4 +4,5 @@ export interface iCountry {
     };
     capital: string;
     region: string;
+    population: number;
 }
