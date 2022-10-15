@@ -5,4 +5,7 @@ export interface iCountry {
     capital: string;
     region: string;
     population: number;
+    area: number
+    flags: { png: string,
+             svg: string };
 }

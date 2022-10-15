@@ -14,7 +14,7 @@ export default function CountriesLoad() {
     return <Loader/>;
   }
   return (
-    <div>
+    <div className="countries">
       <h1>Countries Load : {countries.length}</h1>
       {countries.map((country: iCountry) => (
         <Country
@@ -22,6 +22,8 @@ export default function CountriesLoad() {
           capital={country.capital}
           region={country.region}
           population={country.population}
+          area={country.area}
+          flags={country.flags}
         />
       ))}
     </div>
