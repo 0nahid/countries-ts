@@ -1,0 +1,6 @@
+.countries{
+    /* display 3 countries in one row */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}

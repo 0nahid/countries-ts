@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Loader from "../../Shared/Loader";
 import { iCountry } from "../../types";
 import Country from "../Country/Country";
+import "./CountriesLoad.css";
 
 export default function CountriesLoad() {
   const [countries, setCountries] = useState([]);
@@ -14,8 +15,9 @@ export default function CountriesLoad() {
     return <Loader/>;
   }
   return (
-    <div className="countries">
+    <div>
       <h1>Countries Load : {countries.length}</h1>
+      <div className="countries">
       {countries.map((country: iCountry) => (
         <Country
           name={country.name}
@@ -26,6 +28,7 @@ export default function CountriesLoad() {
           flags={country.flags}
         />
       ))}
+      </div>
     </div>
   );
 }

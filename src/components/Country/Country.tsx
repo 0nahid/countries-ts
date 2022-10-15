@@ -15,7 +15,7 @@ export default function Country(props: iCountry) {
     <>
       <div className="country">
         <div style={{ width: "20em", margin: "auto" }}>
-          <img style={{ width: "100%" }} src={svg} alt={common} />
+          <img style={{ width: "60%" }} src={svg} alt={common} />
         </div>
         <div>
           <h2>Name : {common}</h2>
