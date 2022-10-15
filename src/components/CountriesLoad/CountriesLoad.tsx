@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Loader from "../../Shared/Loader";
-import { iCountry } from "../../types";
 import Country from "../Country/Country";
 import "./CountriesLoad.css";
 
@@ -18,16 +17,11 @@ export default function CountriesLoad() {
     <div>
       <h1>Countries Load : {countries.length}</h1>
       <div className="countries">
-      {countries.map((country: iCountry) => (
-        <Country
-          name={country.name}
-          capital={country.capital}
-          region={country.region}
-          population={country.population}
-          area={country.area}
-          flags={country.flags}
-        />
-      ))}
+        {countries.map((country,index:number) => (
+          <Country key={index} 
+            {...country as object}
+          />
+        ))}
       </div>
     </div>
   );

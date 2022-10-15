@@ -1,28 +1,21 @@
 import React from "react";
-import { iCountry } from "../../types";
+import { countryData } from "../../types";
 import "./Country.css";
 
-export default function Country(props: iCountry) {
-  const {
-    name: { common },
-    capital,
-    population,
-    area,
-    flags: { svg },
-  } = props;
+
+export default function Country(props: object, index: number) {
+  console.log(props);
+
+  // destructure props
+  const { name, flags } = props as countryData;
 
   return (
     <>
       <div className="country">
-        <div style={{ width: "20em", margin: "auto" }}>
-          <img style={{ width: "60%" }} src={svg} alt={common} />
-        </div>
-        <div>
-          <h2>Name : {common}</h2>
-          <p>Capital : {capital}</p>
-          <p>Population : {population}</p>
-          <p>Area : {area}</p>
-        </div>
+        <img style={{ width: "250px", 
+         backgroundPosition: 'center', backgroundSize: 'cover' }} 
+           src={flags.svg} alt="" />
+        <h2>{name.common}</h2>
       </div>
     </>
   );
