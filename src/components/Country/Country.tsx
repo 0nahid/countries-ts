@@ -2,7 +2,6 @@ import { countryData } from "../../types";
 import "./Country.css";
 
 export default function Country(props: object, index: number) {
-  console.log(props);
 
   const { name, flags ,capital , region , population, area } = props as countryData;
 
@@ -22,25 +21,6 @@ export default function Country(props: object, index: number) {
             src={flags.svg}
             alt=""
           />
-          <button
-            style={{
-              padding: "10px",
-              borderRadius: "10px",
-              border: "none",
-              cursor: "pointer",
-              fontSize: "16px",
-              fontWeight: "bold",
-              outline: "none",
-            }}
-          >
-            <a
-              href={`https://en.wikipedia.org/wiki/${name.common}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              View Details
-            </a>
-          </button>
         </div>
         <div>
           <h2>Name : {name.common}</h2>

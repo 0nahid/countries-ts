@@ -17,7 +17,7 @@ export default function CountriesLoad() {
       <h1>Countries Load : {countries.length}</h1>
       <div className="countries">
         {
-          countries.map((country: object) => <Country {...country} />)
+          countries.map((country: object,index: number) =><Country key={index} {...country} />)
         }
       </div>
     </div>
