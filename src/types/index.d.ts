@@ -5,4 +5,8 @@ export interface countryData {
   flags: {
     svg: string;
   };
+  capital: string;
+  region: string;
+  population: number;
+  area: number;
 }
